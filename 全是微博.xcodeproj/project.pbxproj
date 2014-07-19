@@ -27,6 +27,7 @@
 		AF27E5AB196E9F1D0043AEC8 /* GYLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF27E5AA196E9F1D0043AEC8 /* GYLoadMoreFooter.m */; };
 		AF27E5AD196EA0460043AEC8 /* GYLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF27E5AC196EA0460043AEC8 /* GYLoadMoreFooter.xib */; };
 		AF27E5B0196EDF320043AEC8 /* GYComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF27E5AF196EDF320043AEC8 /* GYComposeToolBar.m */; };
+		AF2897E8197666A300F7290E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2897E7197666A300F7290E /* Images.xcassets */; };
 		AF2EF8781974E928005C43E1 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2EF8771974E928005C43E1 /* NSDate+MJ.m */; };
 		AF2F14651965962400D324F6 /* UIBarButtonItem+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2F14641965962400D324F6 /* UIBarButtonItem+extension.m */; };
 		AF2F1487196599DE00D324F6 /* GYOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2F147F196599DE00D324F6 /* GYOneViewController.m */; };
@@ -49,7 +50,6 @@
 		AF3911FB196563B8000896BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3911FA196563B8000896BE /* CoreGraphics.framework */; };
 		AF3911FD196563B8000896BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3911FC196563B8000896BE /* UIKit.framework */; };
 		AF391203196563B8000896BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF391201196563B8000896BE /* InfoPlist.strings */; };
-		AF391211196563B8000896BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF391210196563B8000896BE /* Images.xcassets */; };
 		AF391218196563B8000896BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF391217196563B8000896BE /* XCTest.framework */; };
 		AF391219196563B8000896BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3911F8196563B8000896BE /* Foundation.framework */; };
 		AF39121A196563B8000896BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3911FC196563B8000896BE /* UIKit.framework */; };
@@ -67,6 +67,8 @@
 		AF3D7EEE1966E027001269F8 /* GYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7EED1966E027001269F8 /* GYSearchBar.m */; };
 		AF3D7EF11966E413001269F8 /* GYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7EF01966E413001269F8 /* GYTitleButton.m */; };
 		AF3D7EF41966F07A001269F8 /* GYPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7EF31966F07A001269F8 /* GYPopMenu.m */; };
+		AF4954E619778B510030A418 /* GYEmotionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4954E519778B510030A418 /* GYEmotionGridView.m */; };
+		AF4954E91977A1130030A418 /* GYEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4954E81977A1130030A418 /* GYEmotionView.m */; };
 		AF4BD955197106350070A147 /* GYAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4BD94A197106350070A147 /* GYAccount.m */; };
 		AF4BD956197106350070A147 /* GYHomeStatusesParam.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4BD94D197106350070A147 /* GYHomeStatusesParam.m */; };
 		AF4BD957197106350070A147 /* GYHomeStatusesResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4BD94F197106350070A147 /* GYHomeStatusesResult.m */; };
@@ -77,7 +79,15 @@
 		AF4BD963197120020070A147 /* GYUserInfoResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4BD962197120020070A147 /* GYUserInfoResult.m */; };
 		AF67452B19760BBA00251B1F /* GYStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF67452A19760BBA00251B1F /* GYStatusPhotosView.m */; };
 		AF67452E19760BD000251B1F /* GYStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF67452D19760BD000251B1F /* GYStatusPhotoView.m */; };
+		AF67453219765D2F00251B1F /* GYEmotionKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = AF67453119765D2F00251B1F /* GYEmotionKeyboard.m */; };
+		AF67453519765FA600251B1F /* GYEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF67453419765FA600251B1F /* GYEmotionListView.m */; };
+		AF6745381976601E00251B1F /* GYEmotionToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6745371976601E00251B1F /* GYEmotionToolbar.m */; };
+		AF703CEF1976A9C100C3E03A /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = AF703CEE1976A9C100C3E03A /* EmotionIcons */; };
+		AF703CF51976AC1C00C3E03A /* GYEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = AF703CF41976AC1C00C3E03A /* GYEmotion.m */; };
 		AF7900B61965804D00FE9138 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7900B51965804D00FE9138 /* UIView+extension.m */; };
+		AFC584BA1977E11000112833 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC584B91977E11000112833 /* NSString+Emoji.m */; };
+		AFC584C01977F53B00112833 /* GYEmotionGlassView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC584BF1977F53B00112833 /* GYEmotionGlassView.m */; };
+		AFC584C21977F55A00112833 /* GYEmotionGlassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC584C11977F55A00112833 /* GYEmotionGlassView.xib */; };
 		AFE200D2196CC4F500D7564C /* GYNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE200D1196CC4F500D7564C /* GYNewFeatureViewController.m */; };
 		AFE200D9196CEBF200D7564C /* GYOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE200D8196CEBF200D7564C /* GYOAuthViewController.m */; };
 		AFE200F5196D01FC00D7564C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE200DD196D01FC00D7564C /* AFHTTPRequestOperation.m */; };
@@ -113,6 +123,8 @@
 		AFE20142196D2D3B00D7564C /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE20131196D2D3B00D7564C /* UIImage+WebP.m */; };
 		AFE20143196D2D3B00D7564C /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE20133196D2D3B00D7564C /* UIImageView+HighlightedWebCache.m */; };
 		AFE20144196D2D3B00D7564C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE20135196D2D3B00D7564C /* UIImageView+WebCache.m */; };
+		AFEC28291978D5F6007A988F /* GYEmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEC28281978D5F6007A988F /* GYEmotionTool.m */; };
+		AFEC282C19794766007A988F /* GYEmotionTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEC282B19794766007A988F /* GYEmotionTextView.m */; };
 		AFFC76BA196BC67B00AE66C3 /* GYComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC76B9196BC67B00AE66C3 /* GYComposeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +179,7 @@
 		AF27E5AC196EA0460043AEC8 /* GYLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYLoadMoreFooter.xib; sourceTree = "<group>"; };
 		AF27E5AE196EDF320043AEC8 /* GYComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYComposeToolBar.h; sourceTree = "<group>"; };
 		AF27E5AF196EDF320043AEC8 /* GYComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYComposeToolBar.m; sourceTree = "<group>"; };
+		AF2897E7197666A300F7290E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF2EF8761974E47F005C43E1 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
 		AF2EF8771974E928005C43E1 /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
 		AF2F14631965962400D324F6 /* UIBarButtonItem+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+extension.h"; sourceTree = "<group>"; };
@@ -207,7 +220,6 @@
 		AF391200196563B8000896BE /* 全是微博-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "全是微博-Info.plist"; sourceTree = "<group>"; };
 		AF391202196563B8000896BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF391206196563B8000896BE /* 全是微博-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "全是微博-Prefix.pch"; sourceTree = "<group>"; };
-		AF391210196563B8000896BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF391216196563B8000896BE /* 全是微博Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "全是微博Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF391217196563B8000896BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AF39121F196563B8000896BE /* 全是微博Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "全是微博Tests-Info.plist"; sourceTree = "<group>"; };
@@ -236,6 +248,10 @@
 		AF3D7EF01966E413001269F8 /* GYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYTitleButton.m; sourceTree = "<group>"; };
 		AF3D7EF21966F07A001269F8 /* GYPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYPopMenu.h; sourceTree = "<group>"; };
 		AF3D7EF31966F07A001269F8 /* GYPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYPopMenu.m; sourceTree = "<group>"; };
+		AF4954E419778B510030A418 /* GYEmotionGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionGridView.h; sourceTree = "<group>"; };
+		AF4954E519778B510030A418 /* GYEmotionGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionGridView.m; sourceTree = "<group>"; };
+		AF4954E71977A1130030A418 /* GYEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionView.h; sourceTree = "<group>"; };
+		AF4954E81977A1130030A418 /* GYEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionView.m; sourceTree = "<group>"; };
 		AF4BD949197106350070A147 /* GYAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYAccount.h; sourceTree = "<group>"; };
 		AF4BD94A197106350070A147 /* GYAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYAccount.m; sourceTree = "<group>"; };
 		AF4BD94C197106350070A147 /* GYHomeStatusesParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYHomeStatusesParam.h; sourceTree = "<group>"; };
@@ -256,8 +272,22 @@
 		AF67452A19760BBA00251B1F /* GYStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYStatusPhotosView.m; sourceTree = "<group>"; };
 		AF67452C19760BD000251B1F /* GYStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYStatusPhotoView.h; sourceTree = "<group>"; };
 		AF67452D19760BD000251B1F /* GYStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYStatusPhotoView.m; sourceTree = "<group>"; };
+		AF67453019765D2F00251B1F /* GYEmotionKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionKeyboard.h; sourceTree = "<group>"; };
+		AF67453119765D2F00251B1F /* GYEmotionKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionKeyboard.m; sourceTree = "<group>"; };
+		AF67453319765FA600251B1F /* GYEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionListView.h; sourceTree = "<group>"; };
+		AF67453419765FA600251B1F /* GYEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionListView.m; sourceTree = "<group>"; };
+		AF6745361976601E00251B1F /* GYEmotionToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionToolbar.h; sourceTree = "<group>"; };
+		AF6745371976601E00251B1F /* GYEmotionToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionToolbar.m; sourceTree = "<group>"; };
+		AF703CEE1976A9C100C3E03A /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
+		AF703CF31976AC1C00C3E03A /* GYEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotion.h; sourceTree = "<group>"; };
+		AF703CF41976AC1C00C3E03A /* GYEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotion.m; sourceTree = "<group>"; };
 		AF7900B41965804D00FE9138 /* UIView+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extension.h"; sourceTree = "<group>"; };
 		AF7900B51965804D00FE9138 /* UIView+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extension.m"; sourceTree = "<group>"; };
+		AFC584B81977E11000112833 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		AFC584B91977E11000112833 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		AFC584BE1977F53B00112833 /* GYEmotionGlassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionGlassView.h; sourceTree = "<group>"; };
+		AFC584BF1977F53B00112833 /* GYEmotionGlassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionGlassView.m; sourceTree = "<group>"; };
+		AFC584C11977F55A00112833 /* GYEmotionGlassView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYEmotionGlassView.xib; sourceTree = "<group>"; };
 		AFE200D0196CC4F500D7564C /* GYNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYNewFeatureViewController.h; sourceTree = "<group>"; };
 		AFE200D1196CC4F500D7564C /* GYNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYNewFeatureViewController.m; sourceTree = "<group>"; };
 		AFE200D7196CEBF200D7564C /* GYOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYOAuthViewController.h; sourceTree = "<group>"; };
@@ -328,6 +358,10 @@
 		AFE20133196D2D3B00D7564C /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		AFE20134196D2D3B00D7564C /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		AFE20135196D2D3B00D7564C /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		AFEC28271978D5F6007A988F /* GYEmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionTool.h; sourceTree = "<group>"; };
+		AFEC28281978D5F6007A988F /* GYEmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionTool.m; sourceTree = "<group>"; };
+		AFEC282A19794766007A988F /* GYEmotionTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionTextView.h; sourceTree = "<group>"; };
+		AFEC282B19794766007A988F /* GYEmotionTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionTextView.m; sourceTree = "<group>"; };
 		AFFC76B8196BC67B00AE66C3 /* GYComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYComposeViewController.h; sourceTree = "<group>"; };
 		AFFC76B9196BC67B00AE66C3 /* GYComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYComposeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -487,7 +521,8 @@
 		AF3911FF196563B8000896BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF391210196563B8000896BE /* Images.xcassets */,
+				AF703CEE1976A9C100C3E03A /* EmotionIcons */,
+				AF2897E7197666A300F7290E /* Images.xcassets */,
 				AF391200196563B8000896BE /* 全是微博-Info.plist */,
 				AF391201196563B8000896BE /* InfoPlist.strings */,
 				AF391206196563B8000896BE /* 全是微博-Prefix.pch */,
@@ -632,6 +667,8 @@
 				AF2EF8761974E47F005C43E1 /* NSDate+MJ.h */,
 				AF2EF8771974E928005C43E1 /* NSDate+MJ.m */,
 				AFE2010B196D247700D7564C /* Foundation+Log.m */,
+				AFC584B81977E11000112833 /* NSString+Emoji.h */,
+				AFC584B91977E11000112833 /* NSString+Emoji.m */,
 				AF39126B1965781D000896BE /* UIImage+extension.h */,
 				AF39126C1965781D000896BE /* UIImage+extension.m */,
 				AF7900B41965804D00FE9138 /* UIView+extension.h */,
@@ -820,6 +857,37 @@
 			path = UserInfo;
 			sourceTree = "<group>";
 		};
+		AF67452F19765D1500251B1F /* EmotionKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AF67453019765D2F00251B1F /* GYEmotionKeyboard.h */,
+				AF67453119765D2F00251B1F /* GYEmotionKeyboard.m */,
+				AF67453319765FA600251B1F /* GYEmotionListView.h */,
+				AF67453419765FA600251B1F /* GYEmotionListView.m */,
+				AF6745361976601E00251B1F /* GYEmotionToolbar.h */,
+				AF6745371976601E00251B1F /* GYEmotionToolbar.m */,
+				AF4954E419778B510030A418 /* GYEmotionGridView.h */,
+				AF4954E519778B510030A418 /* GYEmotionGridView.m */,
+				AF4954E71977A1130030A418 /* GYEmotionView.h */,
+				AF4954E81977A1130030A418 /* GYEmotionView.m */,
+				AFC584BE1977F53B00112833 /* GYEmotionGlassView.h */,
+				AFC584C11977F55A00112833 /* GYEmotionGlassView.xib */,
+				AFC584BF1977F53B00112833 /* GYEmotionGlassView.m */,
+				AFEC282A19794766007A988F /* GYEmotionTextView.h */,
+				AFEC282B19794766007A988F /* GYEmotionTextView.m */,
+			);
+			path = EmotionKeyboard;
+			sourceTree = "<group>";
+		};
+		AF703CF21976ABB700C3E03A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF703CF31976AC1C00C3E03A /* GYEmotion.h */,
+				AF703CF41976AC1C00C3E03A /* GYEmotion.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AFE200CC196CC4CB00D7564C /* NewFeature(新特性) */ = {
 			isa = PBXGroup;
 			children = (
@@ -974,10 +1042,21 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		AFEC28261978D4AD007A988F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				AFEC28271978D5F6007A988F /* GYEmotionTool.h */,
+				AFEC28281978D5F6007A988F /* GYEmotionTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		AFFC76B4196BC64800AE66C3 /* Compose(发微博) */ = {
 			isa = PBXGroup;
 			children = (
+				AFEC28261978D4AD007A988F /* Tool */,
 				AFFC76B5196BC64800AE66C3 /* Controller */,
+				AF703CF21976ABB700C3E03A /* Model */,
 				AFFC76B7196BC64800AE66C3 /* View */,
 			);
 			path = "Compose(发微博)";
@@ -995,6 +1074,7 @@
 		AFFC76B7196BC64800AE66C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF67452F19765D1500251B1F /* EmotionKeyboard */,
 				AF27E5A6196E89F30043AEC8 /* GYTextView.h */,
 				AF27E5A7196E89F30043AEC8 /* GYTextView.m */,
 				AF27E5AE196EDF320043AEC8 /* GYComposeToolBar.h */,
@@ -1083,8 +1163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF2F1488196599DE00D324F6 /* GYOneViewController.xib in Resources */,
+				AFC584C21977F55A00112833 /* GYEmotionGlassView.xib in Resources */,
 				AF2F148A196599DE00D324F6 /* GYThreeViewController.xib in Resources */,
-				AF391211196563B8000896BE /* Images.xcassets in Resources */,
+				AF2897E8197666A300F7290E /* Images.xcassets in Resources */,
+				AF703CEF1976A9C100C3E03A /* EmotionIcons in Resources */,
 				AF27E5AD196EA0460043AEC8 /* GYLoadMoreFooter.xib in Resources */,
 				AF2F148C196599DE00D324F6 /* GYTwoViewController.xib in Resources */,
 				AF391203196563B8000896BE /* InfoPlist.strings in Resources */,
@@ -1109,9 +1191,12 @@
 			files = (
 				AF171DFE1970096A00814342 /* GYUnreadCountParam.m in Sources */,
 				AF324E0B1973EAF800B21EEB /* GYStatusRetweetedFrame.m in Sources */,
+				AF4954E91977A1130030A418 /* GYEmotionView.m in Sources */,
+				AF67453519765FA600251B1F /* GYEmotionListView.m in Sources */,
 				AF4BD963197120020070A147 /* GYUserInfoResult.m in Sources */,
 				AFE2013F196D2D3B00D7564C /* UIButton+WebCache.m in Sources */,
 				AF171DE3196FA0F400814342 /* MJArgument.m in Sources */,
+				AFC584C01977F53B00112833 /* GYEmotionGlassView.m in Sources */,
 				AF171DC5196F84EC00814342 /* GYHttpTool.m in Sources */,
 				AF3912671965727F000896BE /* GYDiscoverViewController.m in Sources */,
 				AF4BD958197106350070A147 /* GYSendStatusParam.m in Sources */,
@@ -1119,6 +1204,7 @@
 				AFE200FE196D01FC00D7564C /* MBProgressHUD+MJ.m in Sources */,
 				AF2F1489196599DE00D324F6 /* GYThreeViewController.m in Sources */,
 				AF3D7EF41966F07A001269F8 /* GYPopMenu.m in Sources */,
+				AF703CF51976AC1C00C3E03A /* GYEmotion.m in Sources */,
 				AF324E021973EA8600B21EEB /* GYStatusFrame.m in Sources */,
 				AF4BD959197106350070A147 /* GYSendStatusResult.m in Sources */,
 				AF27E5B0196EDF320043AEC8 /* GYComposeToolBar.m in Sources */,
@@ -1135,11 +1221,13 @@
 				AF171DEB196FA0F400814342 /* NSObject+MJMember.m in Sources */,
 				AFE200D2196CC4F500D7564C /* GYNewFeatureViewController.m in Sources */,
 				AF39124B196567B4000896BE /* GYAppDelegate.m in Sources */,
+				AFEC28291978D5F6007A988F /* GYEmotionTool.m in Sources */,
 				AF171DE5196FA0F400814342 /* MJMember.m in Sources */,
 				AF171DFA1970006500814342 /* GYComposePhotosView.m in Sources */,
 				AFE20115196D2A9900D7564C /* GYPhoto.m in Sources */,
 				AF39124C196567B4000896BE /* main.m in Sources */,
 				AF171E0719700F5100814342 /* GYUserTool.m in Sources */,
+				AFC584BA1977E11000112833 /* NSString+Emoji.m in Sources */,
 				AFE20139196D2D3B00D7564C /* SDWebImageCompat.m in Sources */,
 				AFE2013D196D2D3B00D7564C /* SDWebImageManager.m in Sources */,
 				AFE200D9196CEBF200D7564C /* GYOAuthViewController.m in Sources */,
@@ -1150,6 +1238,7 @@
 				AFE20107196D0AEC00D7564C /* GYAccountTool.m in Sources */,
 				AF67452E19760BD000251B1F /* GYStatusPhotoView.m in Sources */,
 				AF7900B61965804D00FE9138 /* UIView+extension.m in Sources */,
+				AF4954E619778B510030A418 /* GYEmotionGridView.m in Sources */,
 				AF324E051973EAA800B21EEB /* GYStatusDetailFrame.m in Sources */,
 				AF4BD957197106350070A147 /* GYHomeStatusesResult.m in Sources */,
 				AF171DEA196FA0F400814342 /* NSObject+MJKeyValue.m in Sources */,
@@ -1161,6 +1250,7 @@
 				AF324DFB1973E8E000B21EEB /* GYStatusOriginalView.m in Sources */,
 				AF39126D1965781D000896BE /* UIImage+extension.m in Sources */,
 				AF171DE6196FA0F400814342 /* MJMethod.m in Sources */,
+				AF67453219765D2F00251B1F /* GYEmotionKeyboard.m in Sources */,
 				AFE200F8196D01FC00D7564C /* AFNetworkReachabilityManager.m in Sources */,
 				AFE20141196D2D3B00D7564C /* UIImage+MultiFormat.m in Sources */,
 				AFE20100196D01FC00D7564C /* MBProgressHUD.m in Sources */,
@@ -1172,9 +1262,11 @@
 				AFE200F7196D01FC00D7564C /* AFHTTPSessionManager.m in Sources */,
 				AF171DE8196FA0F400814342 /* MJTypeEncoding.m in Sources */,
 				AFE2010F196D263800D7564C /* GYStatus.m in Sources */,
+				AFEC282C19794766007A988F /* GYEmotionTextView.m in Sources */,
 				AF67452B19760BBA00251B1F /* GYStatusPhotosView.m in Sources */,
 				AF324DF51973E87800B21EEB /* GYStatusDetailView.m in Sources */,
 				AFE2010C196D247700D7564C /* Foundation+Log.m in Sources */,
+				AF6745381976601E00251B1F /* GYEmotionToolbar.m in Sources */,
 				AFE20104196D098400D7564C /* GYControllerTool.m in Sources */,
 				AF324DFE1973E90600B21EEB /* GYStatusRetweetedView.m in Sources */,
 				AFE2013E196D2D3B00D7564C /* SDWebImagePrefetcher.m in Sources */,

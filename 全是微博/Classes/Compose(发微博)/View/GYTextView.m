@@ -83,11 +83,18 @@
     [self textDidChange];
 }
 
+-(void)setAttributedText:(NSAttributedString *)attributedText
+{
+    [super setAttributedText:attributedText];
+    
+    [self textDidChange];
+}
+
 #pragma mark - 监听文字改变
 
 - (void)textDidChange
 {
-    self.placeLabel.hidden = (self.text.length != 0);
+    self.placeLabel.hidden = self.hasText;
 }
 
 -(void)dealloc

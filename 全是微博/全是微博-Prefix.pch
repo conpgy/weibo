@@ -18,6 +18,7 @@
     #import "UIBarButtonItem+extension.h"
     #import "MBProgressHUD+MJ.h"
     #import "UIImageView+WebCache.h"
+    #import "MJExtension.h"
 
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
@@ -65,5 +66,22 @@
 #define GYStatusRetweetedNameFont [UIFont systemFontOfSize:13]
 // 转发微博正文的字体大小
 #define GYStatusRetweetedTextFont [UIFont systemFontOfSize:14]
+
+/** 表情相关属性 */
+
+// 最大的列数
+#define GYEmotionMaxCols 7
+
+// 最大的行数
+#define GYEmotionMaxRows 3
+
+// 每页最大的表情数
+#define PerPageMaxEmotions (GYEmotionMaxCols * GYEmotionMaxRows - 1)
+
+#define GYEmotionDidSelectedNotification @"GYEmotionDidSelectedNotification"
+
+#define GYEmotionKeyboardDidClickDeleteButtonNotification @"GYEmotionKeyboardDidClickDeleteButtonNotification"
+
+#define GYSelectedEmotion @"GYSelectedEmotion"
 
 #endif

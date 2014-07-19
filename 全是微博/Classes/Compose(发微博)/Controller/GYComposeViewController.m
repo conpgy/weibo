@@ -7,24 +7,49 @@
 //
 
 #import "GYComposeViewController.h"
-#import "GYTextView.h"
 #import "GYComposeToolBar.h"
 #import "GYComposePhotosView.h"
 #import "GYSendStatusParam.h"
 #import "GYAccountTool.h"
 #import "GYAccount.h"
-#import "MBProgressHUD+MJ.h"
 #import "GYStatusTool.h"
+#import "GYEmotionKeyboard.h"
+#import "GYEmotion.h"
+#import "GYEmotionTool.h"
+#import "GYEmotionTextView.h"
 
 @interface GYComposeViewController ()<GYComposeToolBarDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property (nonatomic, weak) GYTextView *composeView;
+@property (nonatomic, weak) GYEmotionTextView *composeView;
 
 @property (nonatomic, weak) GYComposePhotosView *photosView;
+
+@property (nonatomic, weak) GYComposeToolBar *toolbar;
+
+@property (nonatomic, strong) GYEmotionKeyboard *emotionKeyboard;
+
+/**
+ *  是否正在键盘
+ */
+@property (nonatomic, assign, getter = isChangingKeyboard) BOOL changingKeyboard;
+
 
 @end
 
 @implementation GYComposeViewController
+
+#pragma mark - 懒加载
+
+-(GYEmotionKeyboard *)emotionKeyboard
+{
+    if (!_emotionKeyboard) {
+        _emotionKeyboard = [GYEmotionKeyboard keyboard];
+        _emotionKeyboard.width = GYScreenW;
+        _emotionKeyboard.height = 216;
+    }
+    
+    return _emotionKeyboard;
+}
 
 - (void)viewDidLoad
 {
@@ -41,6 +66,12 @@
     
     // 添加显示图片的控件
     [self setupPhotosView];
+    
+    // 监听表情键盘表情的选中
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emotionDidSelected:) name:GYEmotionDidSelectedNotification object:nil];
+    
+    // 监听表情键盘删除按钮的点击
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emotionDeleteButtonDidClick:) name:GYEmotionKeyboardDidClickDeleteButtonNotification object:nil];
 }
 
 /**
@@ -69,13 +100,17 @@
 
 - (void)setupComposeToolBar
 {
-    GYComposeToolBar *toolBar = [[GYComposeToolBar alloc] init];
-    toolBar.delegate = self;
-    self.composeView.inputAccessoryView = toolBar;
+    GYComposeToolBar *toolbar = [[GYComposeToolBar alloc] init];
+    self.toolbar = toolbar;
+    toolbar.delegate = self;
     
     // 设置frame
-    toolBar.width = self.view.width;
-    toolBar.height = 44;
+    toolbar.x = 0;
+    toolbar.width = self.view.width;
+    toolbar.height = 44;
+    toolbar.y = self.view.height - toolbar.height;
+    
+    [self.view addSubview:toolbar];
 }
 
 /**
@@ -84,7 +119,7 @@
 
 - (void)setupComposeView
 {
-    GYTextView *composeView = [[GYTextView alloc] init];
+    GYEmotionTextView *composeView = [[GYEmotionTextView alloc] init];
     composeView.delegate = self;
     self.composeView = composeView;
     [self.view addSubview:composeView];
@@ -93,6 +128,15 @@
     composeView.frame = self.view.bounds;
     composeView.placeholder = @"分享新鲜事...";
     composeView.alwaysBounceVertical = YES;
+    
+    // 监听键盘
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setNavBar
@@ -175,7 +219,7 @@
 
 - (void)textViewDidChange:(UITextView *)textView
 {
-    self.navigationItem.rightBarButtonItem.enabled = (textView.text.length != 0);
+    self.navigationItem.rightBarButtonItem.enabled = textView.hasText;
 }
 
 #pragma mark - GYComposeToolBarDelegate
@@ -238,8 +282,21 @@
 
 - (void)openEmotion
 {
-    GYLog(@"打开表情页");
+    self.changingKeyboard = YES;
+    
+    if (self.composeView.inputView) {
+        self.composeView.inputView = nil;
+    } else {
+        self.composeView.inputView = self.emotionKeyboard;
+    }
+    
+    [self.composeView resignFirstResponder];
+    self.changingKeyboard = NO;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.composeView becomeFirstResponder];
+    });
 }
+
 
 #pragma mark - UIImagePickerControllerDelegate
 
@@ -252,6 +309,55 @@
     
     // 添加图片到编辑微博的相册控件中
     [self.photosView addImage:image];
+}
+
+#pragma mark - 监听键盘
+
+/**
+ *  键盘将要显示
+ */
+- (void)keyboardWillShow:(NSNotification *)note
+{
+    // 计算键盘弹出需要的时间
+    CGFloat duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:duration animations:^{
+        // 取出键盘的高度
+        CGRect keyboardF = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+        CGFloat keyboardH = keyboardF.size.height;
+        self.toolbar.transform = CGAffineTransformMakeTranslation(0, -keyboardH);
+    }];
+}
+
+/**
+ *  键盘即将隐藏
+ */
+- (void)keyboardWillHide:(NSNotification *)note
+{
+    // 计算键盘弹出需要的时间
+    CGFloat duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    if (self.isChangingKeyboard) return;
+    
+    [UIView animateWithDuration:duration animations:^{
+        self.toolbar.transform = CGAffineTransformIdentity;
+    }];
+}
+
+#pragma mark - 监听表情选中
+
+- (void)emotionDidSelected:(NSNotification *)note
+{
+    GYEmotion *emotion = note.userInfo[GYSelectedEmotion];
+    [self.composeView appendEmotion:emotion];
+    
+    // 检测文字长度
+    [self textViewDidChange:self.composeView];
+}
+
+- (void)emotionDeleteButtonDidClick:(NSNotification *)note
+{
+    [self.composeView deleteBackward];
 }
 
 @end
