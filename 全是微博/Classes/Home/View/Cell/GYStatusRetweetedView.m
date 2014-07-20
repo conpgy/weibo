@@ -80,7 +80,7 @@
     
     // 设置正文
     self.textLabel.frame = retweetedFrame.textFrame;
-    self.textLabel.text = retweetedStatus.text;
+    self.textLabel.attributedText = retweetedStatus.attributeText;
     
     // 设置配图相册
     if (retweetedStatus.pic_urls.count) {

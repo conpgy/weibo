@@ -8,6 +8,7 @@
 
 #import "GYEmotionTextView.h"
 #import "GYEmotion.h"
+#import "GYEmotionAttachment.h"
 
 @implementation GYEmotionTextView
 
@@ -20,13 +21,21 @@
     return self;
 }
 
+/**
+ *  在微博编辑框添加表情时调用
+ *
+ *  @param emotion 添加的表情
+ */
 -(void)appendEmotion:(GYEmotion *)emotion
 {
-    if (emotion.code) {
+    if (emotion.code) { // Emoji表情
         [self insertText:emotion.emoji];
-    } else {
+    } else { // 图片表情
         NSMutableAttributedString *attributeText = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
-        NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
+        
+        // 创建一个带有图片表情的富文本
+        GYEmotionAttachment *attachment = [[GYEmotionAttachment alloc] init];
+        attachment.emotion = emotion;
         NSString *name = [NSString stringWithFormat:@"%@/%@", emotion.directory, emotion.png];
         attachment.image = [UIImage imageWithName:name];
         attachment.bounds = CGRectMake(0, -3, self.font.lineHeight, self.font.lineHeight);
@@ -42,8 +51,32 @@
         
         self.attributedText = attributeText;
         
+        // 让光标回到新插入表情的后面
+        self.selectedRange = NSMakeRange(insertIndex + 1, 0);
     }
     
+}
+
+-(NSString *)realText
+{
+    NSMutableString *string = [NSMutableString string];
+    
+    // 获得微博编辑框的富文本
+    NSAttributedString *attributeText = self.attributedText;
+    
+    // 遍历富文本，将表情转换为文字描述
+    [attributeText enumerateAttributesInRange:NSMakeRange(0, self.attributedText.length) options:0 usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop) {
+        GYEmotionAttachment *attachment = attrs[@"NSAttachment"];
+        if (attachment) {   //有表情
+            [string appendString:attachment.emotion.chs];
+        } else {    // 没有表情
+            // 根据range范围获得富文本的文字内容
+            NSString *subStr = [attributeText attributedSubstringFromRange:range].string;
+            [string appendString:subStr];
+        }
+    }];
+    
+    return string;
 }
 
 @end

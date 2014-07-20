@@ -16,6 +16,11 @@
 @property (nonatomic, copy) NSString *chs;
 
 /**
+ *  表情文字(繁体)
+ */
+@property (nonatomic, copy) NSString *cht;
+
+/**
  *  表情图片
  */
 @property (nonatomic, copy) NSString *png;

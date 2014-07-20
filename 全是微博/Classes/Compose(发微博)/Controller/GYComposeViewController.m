@@ -154,7 +154,7 @@
 }
 
 /**
- *  发布微博
+ *  监听发布微博按钮点击
  */
 - (void)send
 {
@@ -177,7 +177,7 @@
 {
     // 设置微博参数
     GYSendStatusParam *param = [GYSendStatusParam param];
-    param.status = self.composeView.text;
+    param.status = self.composeView.realText;
     
     UIImage *image = self.photosView.images[0];
     NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
@@ -199,7 +199,7 @@
 {
     // 设置发微博参数
     GYSendStatusParam *param = [GYSendStatusParam param];
-    param.status = self.composeView.text;
+    param.status = self.composeView.realText;
     
     // 发布微博
     [GYStatusTool sendStatusesWithParam:param success:^(GYSendStatusResult *result) {

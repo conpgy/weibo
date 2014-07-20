@@ -140,13 +140,13 @@
     
     // 设置正文
     self.textLabel.frame = originalFrame.textFrame;
-    self.textLabel.text = status.text;
+    self.textLabel.attributedText = status.attributeText;
     
     // 设置时间
     // 根据当前时间计算timeLabel的frame
     NSString *time = status.created_at;
     self.timeLabel.text = time;
-    // 设置frame
+    // 设置时间的frame
     self.timeLabel.x = self.nameLabel.x;
     self.timeLabel.y = CGRectGetMaxY(self.nameLabel.frame) + GYStatusCellInset * 0.5;
     CGSize timeSize = [time sizeWithFont:GYStatusOriginalTimeFont];
@@ -156,7 +156,8 @@
     // 设置来源
     NSString *soucre = status.source;
     self.sourceLabel.text = soucre;
-    // 设置frame
+    
+    // 设置自己的frame
     CGFloat sourceX = CGRectGetMaxX(self.timeLabel.frame) + GYStatusCellInset;
     CGFloat sourceY = self.timeLabel.y;
     CGSize sourceSize = [soucre sizeWithFont:GYStatusOriginalSourceFont];

@@ -54,9 +54,9 @@
 #define GYStatusCellMargin 10
 
 // 原创微博昵称的字体大小
-#define GYStatusOriginalNameFont [UIFont systemFontOfSize:13]
+#define GYStatusOriginalNameFont [UIFont systemFontOfSize:16]
 // 原创微博正文的字体大小
-#define GYStatusOriginalTextFont [UIFont systemFontOfSize:14]
+#define GYStatusOriginalTextFont [UIFont systemFontOfSize:18]
 // 原创微博时间字体
 #define GYStatusOriginalTimeFont [UIFont systemFontOfSize:12]
 // 原创微博时间字体
@@ -65,7 +65,10 @@
 // 转发微博昵称的字体大小
 #define GYStatusRetweetedNameFont [UIFont systemFontOfSize:13]
 // 转发微博正文的字体大小
-#define GYStatusRetweetedTextFont [UIFont systemFontOfSize:14]
+#define GYStatusRetweetedTextFont [UIFont systemFontOfSize:18]
+
+// 转发微博正文字体
+#define GYStatusHighTextColor GYColor(88, 161, 253)
 
 /** 表情相关属性 */
 

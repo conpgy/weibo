@@ -64,6 +64,10 @@
 		AF3912671965727F000896BE /* GYDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3912661965727F000896BE /* GYDiscoverViewController.m */; };
 		AF39126A19657291000896BE /* GYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF39126919657291000896BE /* GYProfileViewController.m */; };
 		AF39126D1965781D000896BE /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AF39126C1965781D000896BE /* UIImage+extension.m */; };
+		AF3987C91979F55200FB8D94 /* GYEmotionAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3987C81979F55200FB8D94 /* GYEmotionAttachment.m */; };
+		AF3987CD197A05A900FB8D94 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3987CC197A05A900FB8D94 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF3987D0197A078E00FB8D94 /* GYRegexResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3987CF197A078E00FB8D94 /* GYRegexResult.m */; };
+		AF3987D2197A136C00FB8D94 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3987D1197A136C00FB8D94 /* libicucore.dylib */; };
 		AF3D7EEE1966E027001269F8 /* GYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7EED1966E027001269F8 /* GYSearchBar.m */; };
 		AF3D7EF11966E413001269F8 /* GYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7EF01966E413001269F8 /* GYTitleButton.m */; };
 		AF3D7EF41966F07A001269F8 /* GYPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7EF31966F07A001269F8 /* GYPopMenu.m */; };
@@ -242,6 +246,13 @@
 		AF39126919657291000896BE /* GYProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYProfileViewController.m; sourceTree = "<group>"; };
 		AF39126B1965781D000896BE /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
 		AF39126C1965781D000896BE /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
+		AF3987C71979F55200FB8D94 /* GYEmotionAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYEmotionAttachment.h; sourceTree = "<group>"; };
+		AF3987C81979F55200FB8D94 /* GYEmotionAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYEmotionAttachment.m; sourceTree = "<group>"; };
+		AF3987CB197A05A900FB8D94 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		AF3987CC197A05A900FB8D94 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		AF3987CE197A078E00FB8D94 /* GYRegexResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GYRegexResult.h; path = CellModel/GYRegexResult.h; sourceTree = "<group>"; };
+		AF3987CF197A078E00FB8D94 /* GYRegexResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GYRegexResult.m; path = CellModel/GYRegexResult.m; sourceTree = "<group>"; };
+		AF3987D1197A136C00FB8D94 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		AF3D7EEC1966E027001269F8 /* GYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYSearchBar.h; sourceTree = "<group>"; };
 		AF3D7EED1966E027001269F8 /* GYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYSearchBar.m; sourceTree = "<group>"; };
 		AF3D7EEF1966E413001269F8 /* GYTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYTitleButton.h; sourceTree = "<group>"; };
@@ -371,6 +382,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3987D2197A136C00FB8D94 /* libicucore.dylib in Frameworks */,
 				AF3911FB196563B8000896BE /* CoreGraphics.framework in Frameworks */,
 				AF3911FD196563B8000896BE /* UIKit.framework in Frameworks */,
 				AF3911F9196563B8000896BE /* Foundation.framework in Frameworks */,
@@ -501,6 +513,7 @@
 		AF3911F7196563B8000896BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF3987D1197A136C00FB8D94 /* libicucore.dylib */,
 				AF3911F8196563B8000896BE /* Foundation.framework */,
 				AF3911FA196563B8000896BE /* CoreGraphics.framework */,
 				AF3911FC196563B8000896BE /* UIKit.framework */,
@@ -622,6 +635,8 @@
 			isa = PBXGroup;
 			children = (
 				AF324DFF1973EA8600B21EEB /* CellModel */,
+				AF3987CE197A078E00FB8D94 /* GYRegexResult.h */,
+				AF3987CF197A078E00FB8D94 /* GYRegexResult.m */,
 				AFE2010D196D263800D7564C /* GYStatus.h */,
 				AFE2010E196D263800D7564C /* GYStatus.m */,
 				AFE20110196D27BF00D7564C /* GYUser.h */,
@@ -813,6 +828,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AF3987CA197A05A900FB8D94 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				AF3987CB197A05A900FB8D94 /* RegexKitLite.h */,
+				AF3987CC197A05A900FB8D94 /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
+			sourceTree = "<group>";
+		};
 		AF4BD948197106350070A147 /* AccessToken */ = {
 			isa = PBXGroup;
 			children = (
@@ -884,6 +908,8 @@
 			children = (
 				AF703CF31976AC1C00C3E03A /* GYEmotion.h */,
 				AF703CF41976AC1C00C3E03A /* GYEmotion.m */,
+				AF3987C71979F55200FB8D94 /* GYEmotionAttachment.h */,
+				AF3987C81979F55200FB8D94 /* GYEmotionAttachment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -941,6 +967,7 @@
 		AFE200DA196D01FC00D7564C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				AF3987CA197A05A900FB8D94 /* RegexKitLite */,
 				AF171DCF196FA0F400814342 /* MJExtension */,
 				AFE20116196D2D3B00D7564C /* SDWebImage */,
 				AFE200DB196D01FC00D7564C /* AFNetworking */,
@@ -1207,6 +1234,7 @@
 				AF703CF51976AC1C00C3E03A /* GYEmotion.m in Sources */,
 				AF324E021973EA8600B21EEB /* GYStatusFrame.m in Sources */,
 				AF4BD959197106350070A147 /* GYSendStatusResult.m in Sources */,
+				AF3987CD197A05A900FB8D94 /* RegexKitLite.m in Sources */,
 				AF27E5B0196EDF320043AEC8 /* GYComposeToolBar.m in Sources */,
 				AFE20143196D2D3B00D7564C /* UIImageView+HighlightedWebCache.m in Sources */,
 				AF3D7EEE1966E027001269F8 /* GYSearchBar.m in Sources */,
@@ -1274,6 +1302,7 @@
 				AFE200FC196D01FC00D7564C /* AFURLResponseSerialization.m in Sources */,
 				AFE20112196D27BF00D7564C /* GYUser.m in Sources */,
 				AFE20140196D2D3B00D7564C /* UIImage+GIF.m in Sources */,
+				AF3987D0197A078E00FB8D94 /* GYRegexResult.m in Sources */,
 				AF27E5A8196E89F30043AEC8 /* GYTextView.m in Sources */,
 				AFE200FB196D01FC00D7564C /* AFURLRequestSerialization.m in Sources */,
 				AF4BD95C1971065D0070A147 /* GYAccessTokenParam.m in Sources */,
@@ -1281,6 +1310,7 @@
 				AF4BD96019711F2A0070A147 /* GYUserInfoParam.m in Sources */,
 				AF33F474196AC0F10068C898 /* GYTabBar.m in Sources */,
 				AF2EF8781974E928005C43E1 /* NSDate+MJ.m in Sources */,
+				AF3987C91979F55200FB8D94 /* GYEmotionAttachment.m in Sources */,
 				AFE20136196D2D3B00D7564C /* MKAnnotationView+WebCache.m in Sources */,
 				AFFC76BA196BC67B00AE66C3 /* GYComposeViewController.m in Sources */,
 				AFE2013C196D2D3B00D7564C /* SDWebImageDownloaderOperation.m in Sources */,

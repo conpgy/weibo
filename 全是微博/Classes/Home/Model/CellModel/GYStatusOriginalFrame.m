@@ -43,7 +43,7 @@
     CGFloat textX = iconX;
     CGFloat textY = CGRectGetMaxY(self.iconFrame) + GYStatusCellInset;
     CGSize maxSize = CGSizeMake(GYScreenW - 2 * textX, MAXFLOAT);
-    CGSize textSize = [status.text sizeWithFont:GYStatusOriginalTextFont constrainedToSize:maxSize];
+    CGSize textSize = [status.attributeText boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
     CGFloat textW = textSize.width;
     CGFloat textH = textSize.height;
     self.textFrame = CGRectMake(textX, textY, textW, textH);

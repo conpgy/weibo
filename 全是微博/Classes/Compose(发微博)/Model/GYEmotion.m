@@ -23,6 +23,7 @@
 {
     if (self = [super init]) {
         self.chs = [aDecoder decodeObjectForKey:@"chs"];
+        self.cht = [aDecoder decodeObjectForKey:@"cht"];
         self.png = [aDecoder decodeObjectForKey:@"png"];
         self.emoji = [aDecoder decodeObjectForKey:@"emoji"];
         self.code = [aDecoder decodeObjectForKey:@"code"];
@@ -35,6 +36,7 @@
 -(void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.chs forKey:@"chs"];
+    [aCoder encodeObject:self.cht forKey:@"cht"];
     [aCoder encodeObject:self.png forKey:@"png"];
     [aCoder encodeObject:self.emoji forKey:@"emoji"];
     [aCoder encodeObject:self.code forKey:@"code"];
@@ -49,7 +51,7 @@
     if (otherEmotion.code) {
         return [self.code isEqualToString:otherEmotion.code];
     } else {
-        return ([self.png isEqualToString:otherEmotion.png] && [self.chs isEqualToString:self.chs]);
+        return ([self.png isEqualToString:otherEmotion.png] && [self.chs isEqualToString:otherEmotion.chs] && [self.cht isEqualToString:otherEmotion.cht]);
     }
 }
 

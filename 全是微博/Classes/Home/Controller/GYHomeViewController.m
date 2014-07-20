@@ -340,7 +340,7 @@
     // 刚好能完整看到footerView的高度
     CGFloat savFooterH = self.view.height - self.tabBarController.tabBar.height;
     
-    if (delta <= (savFooterH - 40 )) {
+    if (delta <= savFooterH) {
         [self.footerView beginRefreshing];
         [self loadMoreStatuses];
     }

@@ -16,4 +16,9 @@
  */
 - (void)appendEmotion:(GYEmotion *)emotion;
 
+/**
+ *  微博文字内容，如果文本中有富文本，则会将富文本转换为文字描述
+ */
+- (NSString *)realText;
+
 @end

@@ -27,6 +27,11 @@
 @property (nonatomic, copy) NSString *text;
 
 /**
+ *  微博富文本信息内容
+ */
+@property (nonatomic, copy) NSAttributedString *attributeText;
+
+/**
  *  微博来源
  */
 @property (nonatomic, copy) NSString *source;

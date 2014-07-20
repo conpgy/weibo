@@ -92,4 +92,29 @@ static NSMutableArray *_recentEmotions;
     [NSKeyedArchiver archiveRootObject:_recentEmotions toFile:GYRecentEmotionsFilePath];
 }
 
++(GYEmotion *)emotionWithDesc:(NSString *)desc
+{
+    __block GYEmotion *foundEmotion = nil;
+
+    // 遍历默认表情数组
+    [[self defaultEmotions] enumerateObjectsUsingBlock:^(GYEmotion *emotion, NSUInteger idx, BOOL *stop) {
+        if ([emotion.chs isEqualToString:desc] || [emotion.cht isEqualToString:desc]) {
+            foundEmotion = emotion;
+            *stop = YES;
+        }
+    }];
+    
+    if (foundEmotion) return foundEmotion;
+    
+    // 如果默认表情数组中没有，则在浪小花数组中查找
+    [[self lxhEmotions] enumerateObjectsUsingBlock:^(GYEmotion *emotion, NSUInteger idx, BOOL *stop) {
+        if ([emotion.chs isEqualToString:desc] || [emotion.cht isEqualToString:desc]) {
+            foundEmotion = emotion;
+            *stop = YES;
+        }
+    }];
+    
+    return foundEmotion;
+}
+
 @end

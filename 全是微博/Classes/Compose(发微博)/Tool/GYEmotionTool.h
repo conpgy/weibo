@@ -36,4 +36,9 @@
  */
 + (void)addRecentEmotion:(GYEmotion *)emotion;
 
+/**
+ *  根据图片描述找出对应的表情对象
+ */
++ (GYEmotion *)emotionWithDesc:(NSString *)desc;
+
 @end
